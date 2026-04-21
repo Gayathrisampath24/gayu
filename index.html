@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Gold & Black | Birthday Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Decorative gold corners -->
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="game-header">
+            <h1>✦ BIRTHDAY PUZZLE ✦</h1>
+            <div class="gold-divider"></div>
+        </div>
+
+        <!-- SIDE BY SIDE LAYOUT -->
+        <div class="game-layout">
+            <!-- LEFT SIDE: Puzzle Board -->
+            <div class="puzzle-section">
+                <div class="section-title">✦ PUZZLE BOARD ✦</div>
+                <div class="puzzle-wrapper">
+                    <canvas id="puzzleCanvas" width="400" height="400"></canvas>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: Pieces to Place -->
+            <div class="pieces-section">
+                <div class="section-title">✦ PIECES TO PLACE ✦</div>
+                <div class="pieces-container">
+                    <div id="piecesGrid" class="pieces-grid"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="game-controls">
+            <div class="status-card">
+                <span class="status-label">✦ STATUS ✦</span>
+                <span id="gameStatus" class="status-value">16 pieces left</span>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            <p>drag a piece from the right → drop it on the empty slot on the left</p>
+        </div>
+    </div>
+
+    <!-- Birthday Overlay (Full Screen Celebration) -->
+    <div id="birthdayOverlay" class="birthday-overlay hidden">
+        <div class="celebration-card">
+            <div class="gold-sparkle">✨</div>
+            <h2>WISH YOU HAPPY BIRTHDAY</h2>
+            <h1>Gayu</h1>
+            <div class="gold-line"></div>
+            <p>Call Pannu Di..</p>
+            <div class="close-celebration">✧ tap anywhere to close ✧</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
